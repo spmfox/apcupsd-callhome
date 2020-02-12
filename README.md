@@ -60,6 +60,11 @@ I can't cover the methods of creating Bots or getting your conversation ID from 
 |opt_ToEmail|Email address to send to|
 |opt_TelegramBotToken|Token of Telegram Bot|
 |opt_TelegramMessageID|ID of the Telegram conversation to post the alert to|
+|opt_SendEmail|If not set to yes, email wont be sent (default is yes)|
+|opt_SendTelegram|If not set to yes, Telegram message wont be sent (default is yes)|
 
 
 ## Troubleshooting
+Be sure to have apcupsd configured before trying to run the script. The script can be tested by manually invoking any of the arguments, such as:
+`sudo /opt/apcupsd-callhome/apcupsd-callhome.sh -onbattery`
+That should trigger the script to send and email and Telegram message.

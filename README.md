@@ -8,6 +8,8 @@ There are only two requirements here, SMTP server for sending emails and Telegra
 
 It works by changing the default scripts that come with apcupsd, setting those scripts to call our script. From our one script, we can send emails and Telegram messages regarding all of the power messages that apcupsd can send.
 
+Normally apcupsd has a script for each condition, so it can be a little tedious to edit and maintain each one. Thus, each script just calls our script with the specific condition.
+
 ## Telegram
 I can't cover the methods of creating Bots or getting your conversation ID from Telegram because these methods may change in the future. Here are the basic steps:
 1. Create Telegram Bot, get the Bot Token ID

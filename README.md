@@ -68,3 +68,7 @@ I can't cover the methods of creating Bots or getting your conversation ID from 
 Be sure to have apcupsd configured before trying to run the script. The script can be tested by manually invoking any of the arguments, such as:
 `sudo /opt/apcupsd-callhome/apcupsd-callhome.sh -onbattery`
 That should trigger the script to send and email and Telegram message.
+
+Because both the Telegram message and the email are created using data from variables, it would be difficult to run the commands manually. It would be easier to run the script with bash debug turned on. If you look carefully in the output, you should see the results of your curl to the Telegram API and the result of the email send attempt.
+
+`sudo bash -x /opt/apcupsd-callhome/apcupsd-callhome.sh -onbattery`

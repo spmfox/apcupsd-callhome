@@ -29,6 +29,7 @@ I can't cover the methods of creating Bots or getting your conversation ID from 
 * Configure apcupsd to call our script on each alert
   * `sudo /opt/apcupsd-callhome/apcupsd-callhome.sh -create-event-files`
 * Edit the following variables:
+  * `sudo vim /opt/apcupsd-callhome/apcupsd-callhome.sh`
 
 | Variable | Purpose |
 | ---------| ------- |

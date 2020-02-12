@@ -15,7 +15,7 @@ opt_TelegramMessageID=""                        # ID of the Telegram conversatio
 # Less common options to change
 opt_SendEmail="yes"				# If not set to yes, email wont be sent
 opt_SendTelegram="yes"				# If not set to yes, Telegram message wont be sent
-dir_TemporaryDirectory="/dev/shm/"              # Directory to put one file that will be deleted
+dir_TemporaryDirectory="/tmp/"			# Directory to put one file that will be deleted
 file_EmailMessageFile="$dir_TemporaryDirectory/apcupsd-email.txt"
 
 strScriptPath=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)

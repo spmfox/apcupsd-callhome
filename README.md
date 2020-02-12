@@ -10,6 +10,29 @@ It works by changing the default scripts that come with apcupsd, setting those s
 
 Normally apcupsd has a script for each condition, so it can be a little tedious to edit and maintain each one. Thus, each script just calls our script with the specific condition.
 
+## SELinux
+SELinux blocks the apcupsd program from certain things like using curl to talk to the internet. I have created a module to allow this, however you should read through the text file to see exactly what would be allowed.
+```
+module apcupsd-callhome-selinux 1.0;
+
+require {
+	type http_port_t;
+	type apcupsd_t;
+	type cert_t;
+	class tcp_socket name_connect;
+	class dir write;
+	class file write;
+}
+
+#============= apcupsd_t ==============
+allow apcupsd_t cert_t:dir write;
+allow apcupsd_t cert_t:file write;
+
+#!!!! This avc can be allowed using the boolean 'nis_enabled'
+allow apcupsd_t http_port_t:tcp_socket name_connect;
+
+```
+
 ## Telegram
 I can't cover the methods of creating Bots or getting your conversation ID from Telegram because these methods may change in the future. Here are the basic steps:
 1. Create Telegram Bot, get the Bot Token ID

@@ -11,6 +11,20 @@ I can't cover the methods of creating Bots or getting your conversation ID from 
 1. Create Telegram Bot, get the Bot Token ID
 2. Create a conversation or channel, get the ID
 
+## Installation & Usage
+* Clone git repository
+  * `git clone git@github.com:spmfox/apcupsd-callhome.git`
+* Movie directory to wherever you want it to run from
+  * `mv apcupsd-callhome /opt/`
+* Set root ownership
+  * `sudo chown -R root:root /opt/apcupsd-callhome`
+* Set execute bit on main script
+  * `sudo chmod 700 /opt/apcupsd-callhome/apcupsd-callhome.sh`
+* Install SELinux module (if using SELinux)
+  * `sudo semodule -i /opt/apcupsd-callhome/apcupsd-callhome-selinux.pp`
+* Configure apcupsd to call our script on each alert
+  * `sudo /opt/apcupsd-callhome/apcupsd-callhome.sh -create-event-files`
+
 
 ## Variables
 Here is a list of variables to edit for normal operation

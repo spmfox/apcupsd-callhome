@@ -28,13 +28,14 @@ I can't cover the methods of creating Bots or getting your conversation ID from 
   * `sudo semodule -i /opt/apcupsd-callhome/apcupsd-callhome-selinux.pp`
 * Configure apcupsd to call our script on each alert
   * `sudo /opt/apcupsd-callhome/apcupsd-callhome.sh -create-event-files`
-
-
-## Variables
-Here is a list of variables to edit for normal operation
+* Edit the following variables:
 
 | Variable | Purpose |
 | ---------| ------- |
+|opt_FromEmail|Email address to sent from|
+|opt_ToEmail|Email address to send to|
+|opt_TelegramBotToken|Token of Telegram Bot|
+|opt_TelegramMessageID|ID of the Telegram conversation to post the alert to|
 
 
 ## Troubleshooting

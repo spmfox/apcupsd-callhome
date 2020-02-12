@@ -13,7 +13,7 @@ opt_TelegramBotToken=""                         # Token of Telegram Bot
 opt_TelegramMessageID=""                        # ID of the Telegram conversation to post the alert to
 
 # Less common options to change
-opt_SendEmail="no"				# If not set to yes, email wont be sent
+opt_SendEmail="yes"				# If not set to yes, email wont be sent
 opt_SendTelegram="yes"				# If not set to yes, Telegram message wont be sent
 dir_TemporaryDirectory="/dev/shm/"              # Directory to put one file that will be deleted
 file_EmailMessageFile="$dir_TemporaryDirectory/apcupsd-email.txt"
@@ -111,8 +111,8 @@ fi
 str_CurrentPowerStatus=$(/sbin/apcaccess)
 
 if [ "$opt_SendEmail" = "yes" ]; then
- printf "From: $opt_FromEmail\nTo: $opt_ToEmail\nSubject: $str_Subject\n\n$str_Message" > $file_EmailMessageFile
- /usr/sbin/ssmtp $str_ToEmail < $file_EmailMessageFile
+ printf "From: $opt_FromEmail\nTo: $opt_ToEmail\nSubject: $str_Subject\n\n$str_CurrentPowerStatus" > $file_EmailMessageFile
+ /usr/sbin/ssmtp $opt_ToEmail < $file_EmailMessageFile
  rm $file_EmailMessageFile
  logger -s "ACPUPSD-CallHome: INFO: Email triggered."
 else

@@ -34,9 +34,8 @@ allow apcupsd_t http_port_t:tcp_socket name_connect;
 ```
 
 ## Telegram
-I can't cover the methods of creating Bots or getting your conversation ID from Telegram because these methods may change in the future. Here are the basic steps:
-1. Create Telegram Bot, get the Bot Token ID
-2. Create a conversation or channel, get the ID
+You will need a Telegram bot HTTP API and a chat id, I have created a page to show the minimum steps.
+* https://github.com/spmfox/documentation/blob/master/telegram.md
 
 ## sSMTP
 I have created a page to show the minimum sSMTP configuration for sending emails.

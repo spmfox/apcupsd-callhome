@@ -69,7 +69,7 @@ I have created a page to show the minimum sSMTP configuration for sending emails
 
 
 ## Troubleshooting
-Be sure to have ssmtp configured before trying to run the script. The script can be tested by manually invoking any of the arguments, such as:
+Be sure to have sSMTP and Telegram configured before trying to run the script. The script can be tested by manually invoking any of the arguments, such as:
 `sudo /opt/apcupsd-callhome/apcupsd-callhome.sh -onbattery`
 That should trigger the script to send and email and Telegram message.
 

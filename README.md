@@ -45,7 +45,7 @@ I have created a page to show the minimum sSMTP configuration for sending emails
 * Clone git repository
   * `git clone git@github.com:spmfox/apcupsd-callhome.git`
 * Move directory to wherever you want it to run from
-  * `mv apcupsd-callhome /opt/`
+  * `sudo mv apcupsd-callhome /opt/`
 * Set root ownership
   * `sudo chown -R root:root /opt/apcupsd-callhome`
 * Set execute bit on main script

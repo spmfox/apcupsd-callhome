@@ -38,8 +38,8 @@ I can't cover the methods of creating Bots or getting your conversation ID from 
 1. Create Telegram Bot, get the Bot Token ID
 2. Create a conversation or channel, get the ID
 
-## SSMTP
-I have created a page to show the minimum ssmtp configuration for sending emails.
+## sSMTP
+I have created a page to show the minimum sSMTP configuration for sending emails.
 * https://github.com/spmfox/documentation/blob/master/ssmtp.md
 
 ## Installation & Usage

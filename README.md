@@ -38,10 +38,12 @@ I can't cover the methods of creating Bots or getting your conversation ID from 
 1. Create Telegram Bot, get the Bot Token ID
 2. Create a conversation or channel, get the ID
 
+## SSMTP
+
 ## Installation & Usage
 * Clone git repository
   * `git clone git@github.com:spmfox/apcupsd-callhome.git`
-* Movie directory to wherever you want it to run from
+* Move directory to wherever you want it to run from
   * `mv apcupsd-callhome /opt/`
 * Set root ownership
   * `sudo chown -R root:root /opt/apcupsd-callhome`
@@ -65,7 +67,7 @@ I can't cover the methods of creating Bots or getting your conversation ID from 
 
 
 ## Troubleshooting
-Be sure to have apcupsd configured before trying to run the script. The script can be tested by manually invoking any of the arguments, such as:
+Be sure to have ssmtp configured before trying to run the script. The script can be tested by manually invoking any of the arguments, such as:
 `sudo /opt/apcupsd-callhome/apcupsd-callhome.sh -onbattery`
 That should trigger the script to send and email and Telegram message.
 

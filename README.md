@@ -42,6 +42,7 @@ I have created a page to show the minimum sSMTP configuration for sending emails
 * https://github.com/spmfox/documentation/blob/master/ssmtp.md
 
 ## Installation & Usage
+This procedure has been tested on CentOS 7 and assumes you have ssmtp, apcupsd installed and configured.
 * Clone git repository
   * `git clone https://github.com/spmfox/apcupsd-callhome.git`
 * Move directory to wherever you want it to run from

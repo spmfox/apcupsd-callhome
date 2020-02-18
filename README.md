@@ -50,7 +50,7 @@ This procedure has been tested on CentOS 7 and assumes you have ssmtp, apcupsd i
 * Set root ownership
   * `sudo chown -R root:root /opt/apcupsd-callhome`
 * Set execute bit on main script
-  * `sudo chmod 700 /opt/apcupsd-callhome/apcupsd-callhome.sh`
+  * `sudo chmod 755 /opt/apcupsd-callhome/apcupsd-callhome.sh`
 * Install SELinux module (if using SELinux)
   * `sudo semodule -i /opt/apcupsd-callhome/apcupsd-callhome-selinux.pp`
 * Configure apcupsd to call our script on each alert

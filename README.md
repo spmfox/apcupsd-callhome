@@ -48,7 +48,7 @@ This procedure has been tested on CentOS 7 and assumes you have ssmtp, apcupsd i
 * Copy script into apcupsd working folder
   * `sudo mv apcupsd-callhome/apcupsd-callhome.sh /etc/apcupsd/`
 * Set root ownership
-  * `sudo chown -R root:root /etc/apcupsd/apcupsd-callhome.sh
+  * `sudo chown -R root:root /etc/apcupsd/apcupsd-callhome.sh`
 * Set execute bit on main script
   * `sudo chmod 755 /etc/apcupsd/apcupsd-callhome.sh`
 * Restore SELinux context for newly moved file

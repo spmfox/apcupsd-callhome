@@ -46,7 +46,7 @@ This procedure has been tested on CentOS 7 and assumes you have ssmtp, apcupsd i
 * Clone git repository
   * `git clone https://github.com/spmfox/apcupsd-callhome.git`
 * Copy script into apcupsd working folder
-  * `sudo mv apcupsd-callhome/apcupsd-callhome.sh /etc/apcupsd/`
+  * `sudo cp apcupsd-callhome/apcupsd-callhome.sh /etc/apcupsd/`
 * Set root ownership
   * `sudo chown -R root:root /etc/apcupsd/apcupsd-callhome.sh`
 * Set execute bit on main script

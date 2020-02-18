@@ -45,18 +45,20 @@ I have created a page to show the minimum sSMTP configuration for sending emails
 This procedure has been tested on CentOS 7 and assumes you have ssmtp, apcupsd installed and configured.
 * Clone git repository
   * `git clone https://github.com/spmfox/apcupsd-callhome.git`
-* Move directory to wherever you want it to run from
-  * `sudo mv apcupsd-callhome /opt/`
+* Copy script into apcupsd working folder
+  * `sudo mv apcupsd-callhome/apcupsd-callhome.sh /etc/apcupsd/
 * Set root ownership
-  * `sudo chown -R root:root /opt/apcupsd-callhome`
+  * `sudo chown -R root:root /etc/apcupsd/apcupsd-callhome.sh
 * Set execute bit on main script
-  * `sudo chmod 755 /opt/apcupsd-callhome/apcupsd-callhome.sh`
+  * `sudo chmod 755 /etc/apcupsd/apcupsd-callhome.sh
+* Restore SELinux context for newly moved file
+  * `sudo restorecon -v /etc/apcupsd/apcupsd-callhome.sh`
 * Install SELinux module (if using SELinux)
-  * `sudo semodule -i /opt/apcupsd-callhome/apcupsd-callhome-selinux.pp`
+  * `sudo semodule -i apcupsd-callhome/apcupsd-callhome-selinux.pp`
 * Configure apcupsd to call our script on each alert
-  * `sudo /opt/apcupsd-callhome/apcupsd-callhome.sh -create-event-files`
+  * `sudo /etc/apcupsd/apcupsd-callhome.sh -create-event-files`
 * Edit the following variables:
-  * `sudo vim /opt/apcupsd-callhome/apcupsd-callhome.sh`
+  * `sudo vim /etc/apcupsd/apcupsd-callhome.sh`
 
 | Variable | Purpose |
 | ---------| ------- |

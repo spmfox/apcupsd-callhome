@@ -37,12 +37,8 @@ allow apcupsd_t http_port_t:tcp_socket name_connect;
 You will need a Telegram bot HTTP API and a chat id, I have created a page to show the minimum steps.
 * https://github.com/spmfox/documentation/blob/master/telegram.md
 
-## sSMTP
-I have created a page to show the minimum sSMTP configuration for sending emails.
-* https://github.com/spmfox/documentation/blob/master/ssmtp.md
-
 ## Installation & Usage
-This procedure has been tested on CentOS 7 and assumes you have ssmtp, apcupsd installed and configured.
+This procedure has been tested on CentOS 7 and assumes you have apcupsd installed and reading your UPS.
 * Clone git repository
   * `git clone https://github.com/spmfox/apcupsd-callhome.git`
 * Copy script into apcupsd working folder

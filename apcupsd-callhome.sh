@@ -1,14 +1,18 @@
 #!/bin/bash
 
 #This script assumes that the following packages are in use and/or configured:
-#ssmtp
 #logger
 #apcupsd
 #curl
 
+#SMTP server credentials will be in plaintext, its probably a good idea to have a dedicated email account.
+#cURL command can be modified to provide an external credential file.
+
 #Options that need to be changed
 opt_FromEmail=""				# Email address to sent from
 opt_ToEmail=""					# Email address to send to
+opt_SMTPserver=""				# cURL formatted SMTP server (smtp://mail.host.com:25 OR smtps://mail.host.com:465)
+opt_SMTPcredentials=""				# Credentials for the SMTP server, in cURL format (user:password)
 opt_TelegramBotToken=""                         # Token of Telegram Bot
 opt_TelegramMessageID=""                        # ID of the Telegram conversation to post the alert to
 

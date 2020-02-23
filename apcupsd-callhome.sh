@@ -116,7 +116,7 @@ str_CurrentPowerStatus=$(/sbin/apcaccess)
 
 if [ "$opt_SendEmail" = "yes" ]; then
  printf "From: $opt_FromEmail\nTo: $opt_ToEmail\nSubject: $str_Subject\n\n$str_CurrentPowerStatus" > $file_EmailMessageFile
- /usr/sbin/ssmtp $opt_ToEmail < $file_EmailMessageFile
+ str_EmailSendMessage=$(curl --ssl $opt_SMTPserver --mail-from $opt_FromEmail --mail-rcpt $opt_ToEmail --upload-file $file_EmailMessageFile)
  rm $file_EmailMessageFile
  logger -s "ACPUPSD-CallHome: INFO: Email triggered."
 else

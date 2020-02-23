@@ -67,7 +67,7 @@ This procedure has been tested on CentOS 7 and assumes you have apcupsd installe
 
 
 ## Troubleshooting
-Be sure to have sSMTP and Telegram configured before trying to run the script. The script can be tested by manually invoking any of the arguments, such as:
+Be sure to have your SMTP and Telegram variables configured before trying to run the script. The script can be tested by manually invoking any of the arguments, such as:
 `sudo /opt/apcupsd-callhome/apcupsd-callhome.sh -onbattery`
 That should trigger the script to send and email and Telegram message.
 

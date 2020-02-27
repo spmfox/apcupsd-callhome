@@ -16,12 +16,13 @@ SELinux blocks the apcupsd program from certain things like using curl to talk t
 module apcupsd-callhome-selinux 1.0;
 
 require {
-	type http_port_t;
-	type apcupsd_t;
-	type cert_t;
-	class tcp_socket name_connect;
-	class dir write;
-	class file write;
+        type http_port_t;
+        type smtp_port_t;
+        type apcupsd_t;
+        type cert_t;
+        class tcp_socket name_connect;
+        class dir write;
+        class file write;
 }
 
 #============= apcupsd_t ==============
@@ -30,6 +31,9 @@ allow apcupsd_t cert_t:file write;
 
 #!!!! This avc can be allowed using the boolean 'nis_enabled'
 allow apcupsd_t http_port_t:tcp_socket name_connect;
+
+#!!!! This avc can be allowed using the boolean 'nis_enabled'
+allow apcupsd_t smtp_port_t:tcp_socket name_connect;
 
 ```
 

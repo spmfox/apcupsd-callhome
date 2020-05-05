@@ -16,11 +16,13 @@ opt_SMTPcredentials=""				# Credentials for the SMTP server, in cURL format (use
 opt_TelegramBotToken=""                         # Token of Telegram Bot
 opt_TelegramMessageID=""                        # ID of the Telegram conversation to post the alert to
 
-# Less common options to change
+#Less common options to change
 opt_SendEmail="yes"				# If not set to yes, email wont be sent
 opt_SendTelegram="yes"				# If not set to yes, Telegram message wont be sent
 dir_TemporaryDirectory="/tmp/"			# Directory to put one file that will be deleted
 file_EmailMessageFile="$dir_TemporaryDirectory/apcupsd-email.txt"
+
+#Do not make changes past here
 
 strScriptPath=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 strScriptName="${0##*/}"
